@@ -169,10 +169,10 @@ In the first step, it needs to be decided whether the conversation will actually
 
 In the second step, the speaker now has to choose one of the two constructions of the alternation to utter to the hearer. The probability of choosing either construction is computed by normalising their activation levels, according to @eq-normalisation. Because replicator selection is active, we add a bias activation value $\gamma$ to the innovative's variant activation level before normalisation. Note that this does not entail that the $\mathbf{A}_{\text{normalised}}$ with the highest value is always chosen.
 $$
-\mathbf{A}_{\text{normalised}} = \frac{\mathbf{A}}{\sum_{i=1}^{2} \tilde{A}_i}, \quad \text{where } \tilde{A}_i = 
+\mathbf{A}_{\text{normalised}} = \frac{\mathbf{A}}{\|\mathbf{A}\|_1}, \quad \text{where } \mathbf{A} = \begin{bmatrix} A_1 \\ A_2 \end{bmatrix} \text{ and } A_i = 
 \begin{cases} 
-  A_i + \gamma & \text{if } i = \text{innovative} \\
-  A_i & \text{otherwise}
+  \tilde{A}_i + \gamma & \text{if } i = \text{innovative} \\
+  \tilde{A}_i & \text{otherwise}
 \end{cases}
 $$ {#eq-normalisation}
 
@@ -225,7 +225,7 @@ Because we start from a simple set-up and incrementally increase complexity, we 
 
 ### Parameters {#sec-evaluation-parameters}
 
-In this section, we show the different values we used for the parameters in our computer model. If these parameters change, the behaviour of the simulation changes as well. Some parameters remain constant throughout all simulations, where others are altered to test the impact of a specific parameter. Constant parameters only have one value in @tbl-parameters, parameters with variable values have multiple.
+In this section, we show the different values we used for the parameters in our computer model. If these parameters change, the behaviour of the simulation changes as well. Some parameters remain constant throughout all simulations, where others are altered to test the impact of a specific parameter. Constant parameters only have one value in @tbl-parameters, parameters with varying values have multiple.
 
 | Parameter | Explanation | Value(s) |
 | --- | --- | --- |

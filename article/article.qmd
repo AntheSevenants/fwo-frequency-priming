@@ -1,6 +1,6 @@
 ---
-title: "Priming article"
-title-short: Priming article
+title: "Can syntactic priming lead to language change? An agent-based model"
+title-short: Can syntactic priming lead to language change?
 author:
   - name: Anthe Sevenants
     email: anthe.sevenants@kuleuven.be
